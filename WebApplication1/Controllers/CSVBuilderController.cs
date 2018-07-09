@@ -6,8 +6,24 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
-    public class HomeController : Controller
+    public class CSVBuilderController : Controller
     {
+        public PartialViewResult NewItemPartialView()
+        {
+            return PartialView("NewItem");
+        }
+
+        public PartialViewResult QuestionPartialView()
+        {
+            return PartialView("Question");
+        }
+
+        public PartialViewResult NoteHeaderPartialView()
+        {
+            return PartialView("NoteHeader");
+        }
+
+
         public ActionResult Index()
         {
             return View();
