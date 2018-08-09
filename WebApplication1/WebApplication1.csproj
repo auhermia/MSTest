@@ -237,10 +237,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\CSVBuilder\Form.cshtml" />
-    <Content Include="Views\CSVBuilder\Question.cshtml" />
     <Content Include="Views\CSVBuilder\NewItem.cshtml" />
-    <Content Include="Views\CSVBuilder\NoteHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

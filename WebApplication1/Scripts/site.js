@@ -6,6 +6,7 @@
         $.ajax({
             url: "/CSVBuilder/NewItemPartialView",
             type: "GET",
+            async: false,
             success: function (result) {
                 $('#addItem').before(result);
             }
@@ -16,37 +17,10 @@
     // load correct content depending on item type
     // bind to parent element to enable use on dynamically added elements
     //$(staticAncestors).on(eventName, dynamicChild, function() {});
-    $('.container').on('change', '#typeDropdown', function () {
+    $('.form').on('change', '#typeDropdown', function () {
         if ($('#typeDropdown :selected').text() == "Question") {
-            $('#questionTest').html(
 
-            );
-
-            //$.ajax({
-            //    url: "/CSVBuilder/QuestionPartialView",
-            //    type: "GET",
-            //    success: function (result) {
-            //        $('#questionTest').html(result);
-            //        alert("hey");
-            //    }
-            //});
         }
-        else
-            $('#questionTest').html(''+
-                '<div id="questionNum">' + 
-                    '@Html.Hidden("Id")' + 
-                '</div>' +
-                '@Html.Label("itemText", "Text")' + 
-                '@Html.TextBox("itemText", null, new { title = "Text" })'
-            );
-            //$.ajax({
-            //    url: "/CSVBuilder/NoteHeaderPartialView",
-            //    type: "GET",
-            //    success: function (result) {
-            //        $('#questionTest').html(result);
-            //        alert("note / section header");
-            //    }
-            //});
     });
 });
 
@@ -79,4 +53,30 @@
                         '</select>'+
                     '</div>'+
                 '</div>'
+
+
+
+            //$.ajax({
+            //    url: "/CSVBuilder/NoteHeaderPartialView",
+            //    type: "GET",
+            //    success: function (result) {
+            //        $('#questionTest').html(result);
+            //        alert("note / section header");
+            //    }
+            //});
+
+            //$('#questionTest').html(
+
+            //);
+
+            // load correct partial view ...tedious
+            //$.ajax({
+            //    url: "/CSVBuilder/QuestionPartialView",
+            //    type: "GET",
+            //    success: function (result) {
+            //        $('#questionTest').html(result);
+            //        alert("hey");
+            //    }
+            //});
+        }
 */

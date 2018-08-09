@@ -12,9 +12,11 @@ namespace WebApplication1.Models
         public Guid AnswerId { get; set; }
         public Guid QuestionId { get; set; }
         public string AnswerText { get; set; }
+
+        // auto-generated
         public int SortOrder { get; set; }
         public string CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }
+        public string CreatedOn { get; set; }
         
     }
 }

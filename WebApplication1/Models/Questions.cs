@@ -9,10 +9,10 @@ namespace WebApplication1.Models
     public class Questions
     {
         [Key]
-        public int Id { get; set; }
         public Guid QuestionId { get; set; }
         public Guid SurveyId { get; set; }
         public Guid ParentId { get; set; }
+        [Display(Name = "Question Number")]
         public int QuestionNumber { get; set; }
         [Required]
         public string Text { get; set; }
@@ -20,8 +20,11 @@ namespace WebApplication1.Models
         [Display(Name ="Answer Type")]
         public string AnswerType { get; set; }
         public int SortOrder { get; set; }
+        public Guid ClosedByAnswerOptionId { get; set; }
 
-        // format, backcolor, sortorder, cratedby, craetedon
-        // closedbyansweroptionid
+        public string Format { get; set; }
+        public string BackColor { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
     }
 }

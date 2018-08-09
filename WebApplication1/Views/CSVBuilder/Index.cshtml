@@ -15,56 +15,8 @@
             @Html.Label("formName", "Form Name")
             @Html.TextBox("formName", null, new { title = "Form Name" })
 
-            <div class="formItem">
-                <label for="typeDropdown">Type:</label>
-                <select id="typeDropdown">
-                    <option>----</option>
-                    <option>Note</option>
-                    <option>Question</option>
-                    <option>Section Header</option>
-                </select>
-                <div id="questionTest"></div>
-            </div>
-            <div class="formItem">
-                <label for="typeDropdown">Type:</label>
-                <select id="typeDropdown">
-                    <option>Note</option>
-                    <option>Question</option>
-                    <option>Section Header</option>
-                </select>
-                <div id="questionNum">
-                    @Html.Hidden("Id")
-                    <label for="questionNum">Question Number:</label>
-                    <input id="questionNum" type="text" />
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="questionText">Text</label>
-                        <textarea id="questionText" cols="20" rows="1"></textarea>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="answerControl">Answer Control:</label>
-                        <ul class="dropdown-menu"></ul>
-                        <select id="answerControl">
-                            <option>Radio button: No, Yes</option>
-                            <option>Radio button: No, Yes, N/A</option>
-                            <option>Textbox</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="subQuestion">Sub-Question?</label>
-                        <select id="subQuestion">
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                </div>
-
-            </div>
-
             <button id="addItem">Add Item</button>
         </div>
-      @*  @Html.Action("ShowFormPartialView", "CSVBuilder")*@
         <button>Save</button>
         <button>Cancel</button>
         <button>CSV</button>
@@ -72,3 +24,19 @@
 
 </body>
 </html>
+
+@*
+            @{
+                var i = 0;
+                @Ajax.ActionLink("AjaxAction", "NewItemPartialView", "CSVBuilder",
+                                 new AjaxOptions
+                                 {
+                                     HttpMethod = "GET",
+                                     UpdateTargetId = "questionTest",
+                                     InsertionMode = InsertionMode.ReplaceWith
+                                 },
+                                 null, new { id = "@i" })
+                i++;
+            }    
+
+*@

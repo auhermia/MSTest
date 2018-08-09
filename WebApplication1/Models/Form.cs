@@ -9,8 +9,8 @@ namespace WebApplication1.Models
     public class Form
     {
         [Key]
-        public int Id { get; set; }
-        public Guid QuestionId { get; set; }
-        public int QuestionNumber { get; set; }
+        public int SurveyId { get; set; }
+        [Required]
+        public string SurveyName { get; set; }
     }
 }
