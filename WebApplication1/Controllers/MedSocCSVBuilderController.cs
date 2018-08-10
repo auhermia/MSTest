@@ -6,23 +6,12 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
-    public class CSVBuilderController : Controller
+    public class MedSocCSVBuilderController : Controller
     {
         public PartialViewResult NewItemPartialView()
         {
             return PartialView("NewItem");
         }
-
-        public PartialViewResult QuestionPartialView()
-        {
-            return PartialView("Question");
-        }
-
-        public PartialViewResult NoteHeaderPartialView()
-        {
-            return PartialView("NoteHeader");
-        }
-
 
         public ActionResult Index()
         {

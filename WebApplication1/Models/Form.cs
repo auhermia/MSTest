@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace MedSocCSVBuilder.Models
 {
     public class Form
     {
@@ -12,5 +12,7 @@ namespace WebApplication1.Models
         public int SurveyId { get; set; }
         [Required]
         public string SurveyName { get; set; }
+
+        public virtual ICollection<Question> Questions { get; set; }
     }
 }

@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication1.Models
+namespace MedSocCSVBuilder.Models
 {
-    public class Questions
+    public class Question
     {
         [Key]
         public Guid QuestionId { get; set; }
@@ -26,5 +26,8 @@ namespace WebApplication1.Models
         public string BackColor { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedOn { get; set; }
+
+        public virtual Form Form { get; set; }
+        public virtual ICollection<Answer> Answers { get; set; }
     }
 }
